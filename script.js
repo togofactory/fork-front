@@ -27,7 +27,8 @@ function init() {
 };
 
 async function getCode(questCode) {
-  const Url = `https://port-0-giftserver-9zxht12blq81t0ot.sel4.cloudtype.app/generate`;//클라우드 타입 서버 주소 입력
+  const Url = `https://port-0-giftserver-9zxht12blq81t0ot.sel4.cloudtype.app/generate`;
+  // const Url = `https://port-0-fork-back-17xco2nlt1m4ugh.sel5.cloudtype.app/generate`;
   const Data = JSON.stringify({ userInput: questCode });   
   let response; 
     try {
@@ -55,10 +56,11 @@ async function getCode(questCode) {
     content = content.replace(/\n/g, '<br>');; 
     Swal.fire({
       title: '😁분석결과',
-      html: '<div style="text-align: left;">' + content + '</div>',  
+      html: '<div style="text-align: left;">' + content + '</div>', // HTML 형식으로 content 사용
     });
   } catch (error) {
-    console.error('Error:', error); 
+    console.error('Error:', error);
+    // 이 catch 블록은 JSON 파싱 또는 그 이후의 로직에서 오류가 발생했을 때 실행됩니다.
     Swal.fire({
       title: '에러',
       text: '분석 중 에러가 발생했습니다!',

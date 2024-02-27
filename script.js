@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', init);
-
+<script src="https://ads-partners.coupang.com/g.js"></script>
+<script>
+	new PartnersCoupang.G({"id":761181,"template":"carousel","trackingCode":"AF9322015","width":"680","height":"140","tsource":""});
+</script>
 function init() {
   const inputText = document.getElementById('inputText');
   const sendMessageButton = document.getElementById('sendMessage');
